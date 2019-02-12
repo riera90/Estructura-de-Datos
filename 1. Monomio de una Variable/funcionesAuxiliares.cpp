@@ -66,8 +66,6 @@ void ed::testMonomio()
 	std::cout << RESET;
 	std::cout << "Quitar el comentario de bloque cuando se haya codificado la clase Monomio " << std::endl << std::endl;
 
-/*
-
 	double x;
 
 	// Constructor sin argumentos
@@ -77,7 +75,7 @@ void ed::testMonomio()
 	ed::Monomio m2(1,2);
 
 	// Constructor de copia
-	ed::Monomio m3(m2);
+	//ed::Monomio m3(m2);
 
 	// Lectura y escritura de un número
 	std::cout << BIGREEN;
@@ -85,6 +83,8 @@ void ed::testMonomio()
 	std::cout << RESET;
 	std::cout<< "x --> ";
 	std::cin >> x;
+
+	/*
 
 	// Lectura y escritura usando funciones de la clase Monomio
 	std::cout << BIGREEN;

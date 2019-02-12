@@ -31,6 +31,7 @@ ndebug: all
 $(NAME).exe: $(OBJECTS)
 			@echo "Generando " $@
 			@g++ $^ -o $@
+			@make clean
 #
 $(NAME).o: $(NAME).cpp $(INCLUDES)
 			@echo "Compilando " $<
@@ -62,4 +63,3 @@ doc: Doxyfile
 clean:
 	@echo "Borrando los ficheros superfluos"
 	@rm -f $(OBJECTS) *~ 
-

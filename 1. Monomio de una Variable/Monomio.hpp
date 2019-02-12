@@ -23,29 +23,33 @@ class Monomio
 	//! \name Atributos privados de la clase Monomio
 	private:
 
-	// COMPLETAR
+	// COMPLETAR -> COMPLETADO
 
+		double coeficiente_;
+		int grado_;
 
 	//! \name Funciones o métodos públicos de la clase Monomio
 	public:
 
 	//! \name Constructores de la clase Monomio
 
-	// COMPLETAR
+	// COMPLETAR -> COMPLETADO
 
-
+		Monomio (double coeficiente = 0.0, int grado = 0);
 
 	//! \name Observadores: funciones de consulta de la clase Monomio
 
-	// COMPLETAR
+	// COMPLETAR -> COMPLETADO
 
-
+		inline double getCoeficiente () const {return coeficiente_;};
+		inline int getGrado () const {return grado_;};
 
 	//! \name Funciones de modificación de la clase Monomio
 
-	// COMPLETAR
+	// COMPLETAR -> COMPLETADO
 
-
+		void setCoeficiente (double coeficiente);
+		void setGrado (int grado);
 
 	/////////////////////////////////////////////////
 

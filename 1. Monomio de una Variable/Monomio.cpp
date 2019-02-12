@@ -9,6 +9,31 @@
 
 #include "Monomio.hpp"
 
+// Constructor
+
+//COMPLETAR -> EN PROCESO
+
+ed::Monomio::Monomio (double coeficiente, int grado) {
+	assert (grado >= 0);
+	this -> setCoeficiente (coeficiente);
+	this -> setGrado (grado);
+	assert ((this -> getCoeficiente () - coeficiente) < COTA_ERROR);
+	assert (this -> getGrado () == grado);
+}
+
+// Modificadores
+
+//COMPLETAR -> COMPLETADO
+
+void ed::Monomio::setCoeficiente (double coeficiente) {
+	coeficiente_ = coeficiente;
+}
+
+void ed::Monomio::setGrado (int grado) {
+	assert (grado >= 0);
+	grado_ = grado;
+}
+
 // Operadores de asignación
 
 // COMPLETAR
