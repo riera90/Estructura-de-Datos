@@ -11,7 +11,7 @@
 
 // Constructor
 
-//COMPLETAR -> EN PROCESO
+//COMPLETAR -> EN PROCESO -> COMPLETADO
 
 ed::Monomio::Monomio (double coeficiente, int grado) {
 	assert (grado >= 0);
@@ -25,7 +25,7 @@ ed::Monomio::Monomio (Monomio &monomio) {
 
 // Modificadores
 
-//COMPLETAR -> COMPLETADO
+//COMPLETAR -> EN PROCESO -> COMPLETADO
 
 void ed::Monomio::setCoeficiente (double coeficiente) {
 	coeficiente_ = coeficiente;
@@ -38,7 +38,7 @@ void ed::Monomio::setGrado (int grado) {
 
 // Operadores de asignación
 
-// COMPLETAR
+// COMPLETAR -> EN PROCESO
 
 ed::Monomio & ed::Monomio::operator=(ed::Monomio const &m)
 {
@@ -85,7 +85,7 @@ ed::Monomio & ed::Monomio::operator+=(ed::Monomio const &m)
 
 // Funciones lectura y escritura de la clase Monomio
 
-// COMPLETAR
+// COMPLETAR -> EN PROCESO
 
 void ed::Monomio::leerMonomio () {
 
@@ -99,11 +99,8 @@ void ed::Monomio::escribirMonomio () {
 
 // Funciones auxiliares de la clase Monomio
 
-// COMPLETAR
+// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 double ed::Monomio::calcularValor (double x) {
-	double resultado;
-	resultado = pow (x, this->getGrado())
-	resultado *= this->getCoeficiente();
-	return resultado;
+	return this->getCoeficiente() * pow (x, this->getGrado());
 }

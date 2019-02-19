@@ -23,7 +23,7 @@ class Monomio
 	//! \name Atributos privados de la clase Monomio
 	private:
 
-	// COMPLETAR -> COMPLETADO
+	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 		double coeficiente_;
 		int grado_;
@@ -33,7 +33,7 @@ class Monomio
 
 	//! \name Constructores de la clase Monomio
 
-	// COMPLETAR -> COMPLETADO
+	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 		Monomio (double coeficiente = 0.0, int grado = 0);
 
@@ -41,7 +41,7 @@ class Monomio
 
 	//! \name Observadores: funciones de consulta de la clase Monomio
 
-	// COMPLETAR -> COMPLETADO
+	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 		inline double getCoeficiente () const {return coeficiente_;};
 		inline int getGrado () const {return grado_;};
@@ -88,7 +88,7 @@ class Monomio
 
 	//! \name Funciones auxiliares de la clase Monomio
 
-	// COMPLETAR -> EN PROCESO
+	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 		double calcularValor (double x);
 
