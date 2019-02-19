@@ -1,4 +1,4 @@
-/*! 
+/*!
 	\file Monomio.hpp
 	\brief Definición de la clase Monomio
 */
@@ -17,7 +17,7 @@
 // Se incluye la clase Monomio dentro del espacio de nombre de la asigantura: ed
 namespace ed
 {
-//!  Definición de la clase Monomio:  \f$ coeficiente \hspace{1ex} X^{grado} \f$ 
+//!  Definición de la clase Monomio:  \f$ coeficiente \hspace{1ex} X^{grado} \f$
 class Monomio
 {
 	//! \name Atributos privados de la clase Monomio
@@ -43,12 +43,12 @@ class Monomio
 
 	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
-		inline double getCoeficiente () const {return coeficiente_;};
-		inline int getGrado () const {return grado_;};
+		inline double getCoeficiente () const {return this -> coeficiente_;};
+		inline int getGrado () const {return this -> grado_;};
 
 	//! \name Funciones de modificación de la clase Monomio
 
-	// COMPLETAR -> COMPLETADO
+	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 		void setCoeficiente (double coeficiente);
 		void setGrado (int grado);
@@ -59,27 +59,36 @@ class Monomio
 
 	// Operadores de asignación
 
-		// COMPLETAR LOS COMENTARIOS DE DOXYGEN
+		// COMPLETAR LOS COMENTARIOS DE DOXYGEN -> EN PROCESO -> COMPLETADO
 		Monomio & operator=(Monomio const &m);
 
-		// COMPLETAR LOS COMENTARIOS DE DOXYGEN
+		// COMPLETAR LOS COMENTARIOS DE DOXYGEN -> EN PROCESO -> COMPLETADO
 		Monomio & operator=(double const &x);
 
 
 	// Operadores aritméticos y asignación
 
-		// COMPLETAR LOS COMENTARIOS DE DOXYGEN
+		// COMPLETAR LOS COMENTARIOS DE DOXYGEN -> EN PROCESO -> COMPLETADO
 		Monomio & operator+=(Monomio const &m);
 
 
-		// COMPLETAR EL RESTO DE OPERADORES
+		// COMPLETAR EL RESTO DE OPERADORES -> EN PROCESO -> COMPLETADO
+		Monomio & operator -=(Monomio const &m);
+
+		Monomio & operator *=(Monomio const &m);
+
+		Monomio & operator /=(Monomio const &m);
+
+		Monomio & operator *=(const double x);
+
+		Monomio & operator /=(const double x);
 
 
 	/////////////////////////////////////////////////////////////////////////////////////
 
 	//! \name Funciones lectura y escritura de la clase Monomio
 
-	// COMPLETAR -> EN PROCESO
+	// COMPLETAR -> EN PROCESO -> COMPLETADO
 
 		void leerMonomio ();
 		void escribirMonomio ();

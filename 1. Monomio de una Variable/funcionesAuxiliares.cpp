@@ -75,7 +75,7 @@ void ed::testMonomio()
 	ed::Monomio m2(1,2);
 
 	// Constructor de copia
-	//ed::Monomio m3(m2);
+	ed::Monomio m3(m2);
 
 	// Lectura y escritura de un número
 	std::cout << BIGREEN;
@@ -83,8 +83,6 @@ void ed::testMonomio()
 	std::cout << RESET;
 	std::cout<< "x --> ";
 	std::cin >> x;
-
-	/*
 
 	// Lectura y escritura usando funciones de la clase Monomio
 	std::cout << BIGREEN;
@@ -311,8 +309,6 @@ void ed::testMonomio()
 	m3.escribirMonomio();
 	std::cout << std::endl;
 	std::cout<< "m3(" << x << ") = " << m3.calcularValor(x) << std::endl << std::endl;
-
-*/
 
 	// Fin
 	return;
