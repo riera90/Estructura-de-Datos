@@ -37,6 +37,8 @@ class Monomio
 
 		Monomio (double coeficiente = 0.0, int grado = 0);
 
+		Monomio (Monomio &monomio);
+
 	//! \name Observadores: funciones de consulta de la clase Monomio
 
 	// COMPLETAR -> COMPLETADO
@@ -77,16 +79,18 @@ class Monomio
 
 	//! \name Funciones lectura y escritura de la clase Monomio
 
-	// COMPLETAR
+	// COMPLETAR -> EN PROCESO
 
+		void leerMonomio ();
+		void escribirMonomio ();
 
 	///////////////////////////////////////////////////////////////////////
 
 	//! \name Funciones auxiliares de la clase Monomio
 
-	// COMPLETAR
+	// COMPLETAR -> EN PROCESO
 
-
+		double calcularValor (double x);
 
 };  // Fin de la definición de la clase Monomio
 

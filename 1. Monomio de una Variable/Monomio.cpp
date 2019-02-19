@@ -17,8 +17,10 @@ ed::Monomio::Monomio (double coeficiente, int grado) {
 	assert (grado >= 0);
 	this -> setCoeficiente (coeficiente);
 	this -> setGrado (grado);
-	assert ((this -> getCoeficiente () - coeficiente) < COTA_ERROR);
-	assert (this -> getGrado () == grado);
+}
+
+ed::Monomio::Monomio (Monomio &monomio) {
+	(*this) = monomio;
 }
 
 // Modificadores
@@ -85,6 +87,13 @@ ed::Monomio & ed::Monomio::operator+=(ed::Monomio const &m)
 
 // COMPLETAR
 
+void ed::Monomio::leerMonomio () {
+
+}
+
+void ed::Monomio::escribirMonomio () {
+
+}
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -92,3 +101,9 @@ ed::Monomio & ed::Monomio::operator+=(ed::Monomio const &m)
 
 // COMPLETAR
 
+double ed::Monomio::calcularValor (double x) {
+	double resultado;
+	resultado = pow (x, this->getGrado())
+	resultado *= this->getCoeficiente();
+	return resultado;
+}
