@@ -1,109 +1,156 @@
 /*!
-	\file Monomio.hpp
-	\brief Definición de la clase Monomio
+    \file Monomio.hpp
+    \brief Definición de la clase Monomio
 */
 
 #ifndef _MONOMIO_HPP_
 #define _MONOMIO_HPP_
 
-// Para usar la funciones pow y std::abs
 #include <cmath>
-
-// Para controlar las pre y post condiciones mediante asertos
 #include <cassert>
 
-#define COTA_ERROR 1.0e-6  //!< Cota de error para la comparación números reales
+#define COTA_ERROR 1.0e-6    //!< Cota de error para la comparación números reales
 
-// Se incluye la clase Monomio dentro del espacio de nombre de la asigantura: ed
 namespace ed
 {
-//!  Definición de la clase Monomio:  \f$ coeficiente \hspace{1ex} X^{grado} \f$
+//! Definición de la clase Monomio: \f$ coeficiente \hspace{1ex} X^{grado} \f$
 class Monomio
 {
-	//! \name Atributos privados de la clase Monomio
-	private:
+    //! \name Atributos privados de la clase Monomio
+    private:
 
-	// COMPLETAR -> EN PROCESO -> COMPLETADO
+        double coeficiente_;    //!< Coeficiente del monomio
+        int grado_;    //!< Grado del monomio
 
-		double coeficiente_;
-		int grado_;
+    //! \name Funciones o métodos públicos de la clase Monomio
+    public:
 
-	//! \name Funciones o métodos públicos de la clase Monomio
-	public:
+        //! \name Constructores de la clase Monomio
 
-	//! \name Constructores de la clase Monomio
+        /**
+         * \brief Constructor
+         * \param double coeficiente: coeficiente del monomio
+         * \param int grado: grado del monomio
+         * \pre El grado debe ser mayor o igual que 0
+         * \warning Si no recibe algun valor, a este se le asigna 0
+        */
+        Monomio (double coeficiente = 0.0, int grado = 0);
 
-	// COMPLETAR -> EN PROCESO -> COMPLETADO
+        /**
+         * \brief Constructor de copia
+         * \param Monomio &monomio: referencia de un objeto monomio
+        */
+        Monomio (const Monomio &monomio);
 
-		Monomio (double coeficiente = 0.0, int grado = 0);
+        //! \name Observadores: funciones de consulta de la clase Monomio
 
-		Monomio (Monomio &monomio);
+        /**
+         * \brief Lectura del coeficiente
+         * \retval Valor del coeficiente
+        */
+        inline double getCoeficiente () const {return this->coeficiente_;};
 
-	//! \name Observadores: funciones de consulta de la clase Monomio
+        /**
+         * \brief Lectura del grado
+         * \retval Valor del grado
+        */
+        inline int getGrado () const {return this->grado_;};
 
-	// COMPLETAR -> EN PROCESO -> COMPLETADO
+        //! \name Funciones de modificación de la clase Monomio
 
-		inline double getCoeficiente () const {return this -> coeficiente_;};
-		inline int getGrado () const {return this -> grado_;};
+        /**
+         * \brief Escritura del coeficiente
+         * \param double coeficiente: coeficiente del monomio
+        */
+        void setCoeficiente (double coeficiente);
 
-	//! \name Funciones de modificación de la clase Monomio
+        /**
+         * \brief Escritura del coeficiente
+         * \param double coeficiente: coeficiente del monomio
+         * \pre El grado debe ser mayor o igual que 0
+        */
+        void setGrado (int grado);
 
-	// COMPLETAR -> EN PROCESO -> COMPLETADO
+        //! \name Operadores de la clase Monomio
 
-		void setCoeficiente (double coeficiente);
-		void setGrado (int grado);
+        /**
+         * \brief Operador de asignacion
+         * \param Monomio &m: referencia de un objeto monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator = (const Monomio &m);
 
-	/////////////////////////////////////////////////
+        /**
+         * \brief Operador de asignacion
+         * \param const double x: coeficiente del monomio
+         * \retval Monomio actualizado (con grado 0)
+        */
+        Monomio & operator = (const double &x);
 
-	//! \name Operadores de la clase Monomio
+        /**
+         * \brief Operador aritmetico de suma y asignacion
+         * \param Monomio &m: referencia de un objeto monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator += (Monomio const &m);
 
-	// Operadores de asignación
+        /**
+         * \brief Operador aritmetico de resta y asignacion
+         * \param Monomio &m: referencia de un objeto monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator -= (Monomio const &m);
 
-		// COMPLETAR LOS COMENTARIOS DE DOXYGEN -> EN PROCESO -> COMPLETADO
-		Monomio & operator=(Monomio const &m);
+        /**
+         * \brief Operador aritmetico de multiplicacion y asignacion
+         * \param Monomio &m: referencia de un objeto monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator *= (Monomio const &m);
 
-		// COMPLETAR LOS COMENTARIOS DE DOXYGEN -> EN PROCESO -> COMPLETADO
-		Monomio & operator=(double const &x);
+        /**
+         * \brief Operador aritmetico de division y asignacion
+         * \param Monomio &m: referencia de un objeto monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator /= (Monomio const &m);
 
+        /**
+         * \brief Operador aritmetico de multiplicacion y asignacion
+         * \param const double x: coeficiente del monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator *= (const double x);
 
-	// Operadores aritméticos y asignación
+        /**
+         * \brief Operador aritmetico de division y asignacion
+         * \param const double x: coeficiente del monomio
+         * \retval Monomio actualizado
+        */
+        Monomio & operator /= (const double x);
 
-		// COMPLETAR LOS COMENTARIOS DE DOXYGEN -> EN PROCESO -> COMPLETADO
-		Monomio & operator+=(Monomio const &m);
+        //! \name Funciones lectura y escritura de la clase Monomio
 
+        /**
+         * \brief Lectura de monomio por teclado
+        */
+        void leerMonomio ();
 
-		// COMPLETAR EL RESTO DE OPERADORES -> EN PROCESO -> COMPLETADO
-		Monomio & operator -=(Monomio const &m);
+        /**
+         * \brief Escritura de monomio por pantalla
+        */
+        void escribirMonomio ();
 
-		Monomio & operator *=(Monomio const &m);
+        //! \name Funciones auxiliares de la clase Monomio
 
-		Monomio & operator /=(Monomio const &m);
+        /**
+         * \brief Calculo del valor de un monomio
+         * \param double x: valor que toma x en el monomio
+        */
+        double calcularValor (double x);
 
-		Monomio & operator *=(const double x);
+};
 
-		Monomio & operator /=(const double x);
+}
 
-
-	/////////////////////////////////////////////////////////////////////////////////////
-
-	//! \name Funciones lectura y escritura de la clase Monomio
-
-	// COMPLETAR -> EN PROCESO -> COMPLETADO
-
-		void leerMonomio ();
-		void escribirMonomio ();
-
-	///////////////////////////////////////////////////////////////////////
-
-	//! \name Funciones auxiliares de la clase Monomio
-
-	// COMPLETAR -> EN PROCESO -> COMPLETADO
-
-		double calcularValor (double x);
-
-};  // Fin de la definición de la clase Monomio
-
-}  //  Fin de namespace ed.
-
-// _MONOMIO_HPP_
 #endif

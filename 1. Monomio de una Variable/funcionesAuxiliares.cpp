@@ -327,8 +327,6 @@ void ed::operadoresExternosMonomios()
 	std::cout << RESET;
 	std::cout << "Quitar el comentario de bloque cuando se haya codificado la clase Monomio y los operadores externos de dicha clase" << std::endl << std::endl;
 
-
-/*
 	double x;
 
 	// Constructor por defecto
@@ -356,7 +354,13 @@ void ed::operadoresExternosMonomios()
 
 	std::cout<< "m3 --> ";
 	std::cin >> m3;
+	// Ayuda al usuario durante la ejecucion
  	// Se elimina el salto de línea
+	std::cout << "Para continuar, pulse ";
+	std::cout << INVERSE ;
+	std::cout << "ENTER";
+	std::cout << RESET;
+	// Pausa
 	std::cin.ignore();
 
 
@@ -559,7 +563,6 @@ void ed::operadoresExternosMonomios()
 
 
 	std::cout << std::endl;
-*/
 
 	return;
 }
