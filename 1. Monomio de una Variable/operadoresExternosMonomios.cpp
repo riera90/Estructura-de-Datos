@@ -1,4 +1,4 @@
-/*! 
+/*!
    \file  operadoresExternosMonomios.cpp
 	\brief Ficheros con el código de los operadores externos de la clase Monomio
 */
@@ -18,17 +18,20 @@ namespace ed
 	// Operadores de igualdad
 
 	bool operator == (const ed::Monomio &m1, const ed::Monomio &m2) {
-		if ( (m1.getGrado() == m2.getGrado()) && ( (m1.getCoeficiente() - m2.getCoeficiente() ) < COTA_ERROR) ) return true;
+		if ( (m1.getGrado() == m2.getGrado()) && ( (m1.getCoeficiente() - m2.getCoeficiente() ) < COTA_ERROR) )
+		return true;
 		else return false;
 	}
 
 	bool operator == (const ed::Monomio &m, const double x) {
-		if ( (m.getGrado() == 0) && ( (m.getCoeficiente() - x) < COTA_ERROR) ) return true;
+		if ( (m.getGrado() == 0) && ( (m.getCoeficiente() - x) < COTA_ERROR) )
+		return true;
 		else return false;
 	}
 
 	bool operator == (const double x, const ed::Monomio &m) {
-		if ( (m.getGrado() == 0) && ( (m.getCoeficiente() - x) < COTA_ERROR) ) return true;
+		if ( (m.getGrado() == 0) && ( (m.getCoeficiente() - x) < COTA_ERROR) )
+		return true;
 		else return false;
 	}
 
@@ -64,7 +67,7 @@ namespace ed
 	}
 
 	// Operadores aritméticos binarios
-	
+
 	//  Operador de suma
 	ed::Monomio & operator + (const ed::Monomio &m1, const ed::Monomio &m2) {
 		assert (m1.getGrado() == m2.getGrado());

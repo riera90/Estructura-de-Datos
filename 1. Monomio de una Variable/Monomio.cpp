@@ -134,7 +134,7 @@ void ed::Monomio::leerMonomio () {
 
 void ed::Monomio::escribirMonomio () {
     if (this->getGrado() == 0) {
-        cout << this->getCoeficiente() << endl; 
+        cout << this->getCoeficiente() << endl;
         return;
     }
     if (this->getCoeficiente() == -1) {
@@ -144,14 +144,8 @@ void ed::Monomio::escribirMonomio () {
     } else {
         cout << this->getCoeficiente() << "X";
     }
-    switch (this -> getGrado()) {
-        case 0:
-            break;
-        case 1:
-            break;
-        default:
-            cout << "^" << this->getGrado();
-            break;
+	if (this->getGrado() > 1){
+		cout << "^" << this->getGrado();
     }
     cout << endl;
 }
