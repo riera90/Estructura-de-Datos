@@ -1,8 +1,8 @@
 /*!
  \mainpage Implementación de un monomio
  \brief		\f$ coeficiente X^{grado}\f$
- \author   Fernando Ramírez Baquerizo
- \date     27/02/2019
+  \author Ramírez Baquerizo, Fernando
+  \date   27/02/2019
  \version  1.0
 */
 
@@ -58,6 +58,14 @@ int main()
 				std::cout << RESET;
 
 				ed::operadoresExternosMonomios();
+				break;
+
+			case 3: 
+			   	std::cout << BIBLUE;
+				std::cout << "[3] Ecuacion " << std::endl;
+				std::cout << RESET;
+
+				ed::ecuacion();
 				break;
 
 			default:

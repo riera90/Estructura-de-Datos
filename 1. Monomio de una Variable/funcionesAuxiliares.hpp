@@ -1,8 +1,8 @@
 /*!
   \file   funcionesAuxiliares.hpp
   \brief  Funciones auxiliares para el programa principal de la práctica 1
-  \author 
-  \date  
+  \author Ramírez Baquerizo, Fernando
+  \date   27/02/2019
 */
 
 
@@ -17,15 +17,23 @@ namespace ed
 	*/
 	int menu();
 
-	// COMPLETAR LOS COMENTARIOS DE DOXYGEN
+	/*! 
+		\brief   Pone a prueba la codificacion de la clase Monomio
+	*/
 	void testMonomio();
 
 
-	// COMPLETAR LOS COMENTARIOS DE DOXYGEN
+	/*! 
+		\brief   Pone a prueba las funciones de operadores externos a la clase Monomio
+	*/
 	void operadoresExternosMonomios();
 
-} // Fin del espacio de nombre de la asignatura: ed
+	/*! 
+		\brief   Haya la X
+	*/
+	void ecuacion();
 
-// Fin de _FUNCIONESAUXILIARES_HPP_
+}
+
 #endif
 

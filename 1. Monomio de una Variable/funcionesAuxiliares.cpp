@@ -1,13 +1,14 @@
 /*!
   \file   funcionesAuxiliares.cpp
   \brief  Código de las funciones auxiliares para el programa principal de la práctica 1
-  \author 
-  \date   
+  \author Ramírez Baquerizo, Fernando
+  \date   27/02/2019
 */
 
 // Para los flujos de entrada y salida
 #include <iostream>
 #include <string>
+#include <math.h>
 
 #include "macros.hpp"
 #include "funcionesAuxiliares.hpp"
@@ -36,6 +37,9 @@ int ed::menu()
 
 	PLACE(posicion++,10);
 	std::cout << "[2] Operadores externos de la clase Monomio " << std::endl;
+
+	PLACE(posicion++,10);
+	std::cout << "[3] Ecuacion " << std::endl;
 
 	posicion++;
 	PLACE(posicion++,10);
@@ -565,4 +569,28 @@ void ed::operadoresExternosMonomios()
 	std::cout << std::endl;
 
 	return;
+}
+
+void ed::ecuacion () {
+	Monomio m4;
+	m4.leerMonomio ();
+
+	std::cout << std::endl << "Introduzca el resultado: ";
+	double auxY;
+	std::cin >> auxY;
+
+	double auxX = 1 / m4.getCoeficiente();
+	auxX = pow (auxX, (1/m4.getGrado()));
+
+	std::cout << std::endl;
+	m4.escribirMonomio ();
+	std::cout << "     = " << auxY << std::endl;
+	std::cout << std::endl << "X = " << auxX << std::endl;
+
+	std::cout << "Para continuar, pulse ";
+	std::cout << INVERSE ;
+	std::cout << "ENTER";
+	std::cout << RESET;
+	// Pausa
+	std::cin.ignore();
 }
